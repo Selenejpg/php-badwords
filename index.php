@@ -5,6 +5,8 @@ rilegato in pelle "Storia della magia, di Adalbert Incant" aperto e appoggiato a
 
 $parola = $_GET["parola"];
 
+$paragrafoCensurato = str_replace($parola,'***', $paragrafo);
+
 ?>
 
 <!DOCTYPE html>
@@ -29,7 +31,8 @@ $parola = $_GET["parola"];
         </form>
 
         <h4>Testo censurato</h4>
-        <p><?php echo str_replace($parola,'***', $paragrafo)?></p>
+        <p><?php echo $paragrafoCensurato?></p>
+        <p>La lunghezza del paragrafo è di <?php echo strlen($paragrafoCensurato)?> caratteri.</p>
     </div>
 </body>
 </html>
