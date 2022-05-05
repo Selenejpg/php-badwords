@@ -3,7 +3,7 @@
 $paragrafo =  'Era quasi mezzanotte, e Harry era steso sul letto a pancia in giù, le coperte tirate sulla testa come una tenda, una torcia in mano e un grosso libro
 rilegato in pelle "Storia della magia, di Adalbert Incant" aperto e appoggiato al cuscino.';
 
-$parola = $_GET["parola"];
+$parola = isset($_GET["parola"]) ? $_GET["parola"] : '';
 
 $paragrafoCensurato = str_replace($parola,'***', $paragrafo);
 
